@@ -25,13 +25,14 @@ test('clicking the top left button adds an X to the square', async () =>{
 
     await leftTopButton.click()
     await driver.sleep(3000)
-    // expect(leftTopButton.text().toBe('X')) wasn't able to figure this out
+    expect(await leftTopButton.getText()).toBe('X') 
 })
 test('clicking the top right button adds an X to the square', async () =>{
     const rightTopButton = await driver.findElement(By.id('cell-2'));
 
     await rightTopButton.click()
     await driver.sleep(3000)
+    expect(await rightTopButton.getText()).toBe('X') 
     
 })
 
@@ -40,6 +41,6 @@ test('clicking the bottom right button adds an X to the square', async () =>{
 
     await bottomRightButton.click()
     await driver.sleep(3000)
-    
+    expect(await bottomRightButton.getText()).toBe('X') 
 })
 
